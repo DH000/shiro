@@ -51,16 +51,6 @@ public class RoleServiceImpl implements RoleService {
 		return roleDao.findByUser(userId);
 	}
 	
-	public Set<String> getRolesByUser(Integer userId){
-		List<Role> roles = this.findByUser(userId);
-		
-		Set<String> rolesSet = new HashSet<>();
-		for(Role role : roles){
-			rolesSet.add(role.getName());
-		}
-		
-		return rolesSet;
-	}
 
 }
 
